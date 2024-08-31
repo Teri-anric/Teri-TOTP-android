@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activity.OtpInfoActivity">
+
+    <LinearLayout
+        android:id="@+id/header_line"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+
+            <ImageView
+                android:id="@+id/profilePhoto"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:background="@drawable/circular_background"
+                android:scaleType="centerCrop"
+                android:layout_marginRight="10dp"
+                app:layout_constraintRight_toLeftOf="@id/spacer"
+                android:src="@drawable/circle_user" />
+
+            <TextView
+                android:id="@+id/username"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Username"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                app:layout_constraintRight_toRightOf="@id/profilePhoto"
+                app:layout_constraintTop_toBottomOf="@id/profilePhoto" />
+
+
+            <TextView
+                android:id="@+id/platform"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Platform"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                app:layout_constraintLeft_toLeftOf="@id/platformPhoto"
+                app:layout_constraintTop_toBottomOf="@id/platformPhoto" />
+
+
+            <ImageView
+                android:id="@+id/platformPhoto"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_marginLeft="10dp"
+                android:layout_gravity="center"
+                android:layout_marginEnd="4dp"
+                android:background="@drawable/circular_background"
+
+                android:scaleType="centerCrop"
+                android:src="@drawable/ic_company"
+                app:layout_constraintLeft_toRightOf="@id/spacer"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                android:src="@drawable/ic_user_key"
+                android:id="@+id/spacer"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <com.google.android.material.progressindicator.LinearProgressIndicator
+            android:id="@+id/code_time_indicator"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleY="2"
+            android:indeterminate="false"
+            android:indeterminateDuration="1"
+            />
+
+        <TextView
+            android:id="@+id/one_time_code"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:lineSpacingExtra="10sp"
+            android:text="... ..."
+            android:textAlignment="center"
+            android:textSize="34sp"
+            android:typeface="monospace" />
+
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/qr_code_image_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:src="@drawable/click_to_shared_qr_code"
+        app:layout_constraintTop_toBottomOf="@id/header_line"
+        app:layout_constraintBottom_toTopOf="@id/delete_button"
+        >
+
+    </ImageView>
+
+    <Button
+        android:id="@+id/delete_button"
+        android:backgroundTint="@android:color/holo_red_dark"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/delete"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+    />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
