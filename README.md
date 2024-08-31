@@ -1,6 +1,4 @@
-# TeriTOTP
-
-![Logo](app/src/main/ic_launcher-playstore.png)
+<img alt="Logo" height="150" src="app/src/main/ic_launcher-playstore.png" title="TeriTOTP" width="150"/>
 
 **TeriTOTP** is an open-source, community-driven two-factor authentication (2FA) app created by an
 enthusiast passionate about security and privacy. The app ensures transparency, allowing users to
